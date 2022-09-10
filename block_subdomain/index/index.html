@@ -1,0 +1,394 @@
+<title>Home | BLOCK.BURSTCOIN.INFO</title><!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from burstcoin.info/block_subdomain/index/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Sep 2022 15:41:34 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="https://block.burstcoin.info/img/favicon.ico">
+<link href="../../bootstrap/3-3-4/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/block_subdomain/roboto.min.css" rel="stylesheet">
+			<link rel="stylesheet" href="../../css/block_subdomain/material.min.css">
+            <link rel="stylesheet" href="../../css/block_subdomain/ripples.min.css">
+<script src="../../ajax/libs/jquery/1-11-1/jquery.min.js"></script>
+<link rel="stylesheet" href="../../css/block_subdomain/main.css">
+<link rel="stylesheet" type="text/css" href="../../plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css">
+<script type="text/javascript" language="javascript" src="../../1-10-5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="../../plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<script src="../../stock/highstock.js"></script>
+            <script src="../../stock/modules/exporting.js"></script><script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				var table = $('#table_id7').DataTable({
+        			'order': [[ 3, 'desc']]
+				});
+			});
+		</script>
+</head>
+<body><div class="navbar navbar-default navbar-static-top container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><img style="max-width:80px;" src="../../img/block_subdomain/logo_w.png"></a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+        </ul>
+        <form class="navbar-form navbar-left form-inline" action="https://burstcoin.info/" width="280px">
+			<div class="form-group has-white">
+				<div class="input-group">
+					<input style="width:250px; max-width:100%; padding-bottom:10px;" class="form-control floating-label" data-hint="Account, Account name, Asset, Transaction, Block/Height" name="s" placeholder="Search" type="text">
+					<span class="input-group-addon" style="color:white;"><button type="submit" class="btn btn-submit" style="color:white; padding:10px; margin:-10px;"><i class="mdi-action-search"></i></button></span>
+					<!--<i class='mdi-action-search'></i>-->
+				</div>
+			</div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+	<form class="navbar-form form-inline" name="conv">
+		<div class="form-group has-white">
+			<div class="input-group">
+			<span class="input-group-addon" style="color:white;">Burst</span>
+			<input style="width:80px;" onkeyup="checnum(this);burstconv();" name="burst" class="form-control" value="1000" placeholder="BURST">
+			</div>
+		</div>
+		<div class="form-group has-white">
+			<div class="input-group">
+			<span class="input-group-addon" style="color:white;">=</span>
+			<input style="width:80px;" onkeyup="checnum(this);currconv();" name="curr" class="form-control" placeholder="USD"> 
+				<span class="input-group-addon" style="color:white;">USD</span>
+			</div>
+		</div>
+	</form>
+                </li>
+            <li><a data-toggle="modal" data-target="#settings" href="#"><i style="font-size:18px;" class="mdi-action-settings"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!--settings -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="font-size:16px;">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Settings</h4>
+      </div>
+      <div class="modal-body">
+		  <br>
+        <form class="form-inline" action="https://burstcoin.info/block_subdomain/index/" method="get">
+            		 <div class="form-group"><select placeholder="Currency" class="select form-control floating-label" name="c">
+            <option value="USD">USD</option><option value="NZD">NZD</option><option value="BTC">BTC</option><option value="JPY">JPY</option><option value="AUD">AUD</option><option value="CNY">CNY</option><option value="SGD">SGD</option><option value="HKD">HKD</option><option value="CAD">CAD</option><option value="CLP">CLP</option><option value="GBP">GBP</option><option value="DKK">DKK</option><option value="SEK">SEK</option><option value="ISK">ISK</option><option value="CHF">CHF</option><option value="BRL">BRL</option><option value="EUR">EUR</option><option value="RUB">RUB</option><option value="PLN">PLN</option><option value="THB">THB</option><option value="KRW">KRW</option><option value="TWD">TWD</option>            </select>
+             </div>
+      </div>
+      <div class="modal-footer">
+         <button type="submit" class="btn btn-primary pull-right"><i style="font-size:20px;" class="mdi-content-save"></i> Save</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /settings -->	
+<script type="text/javascript">
+function checnum(as)
+{
+var dd = as.value;
+if(isNaN(dd))
+{
+dd = dd.substring(0,(dd.length-1));
+as.value = dd;
+}
+} function currconv(val){
+with(document.conv){
+burst.value = (curr.value*5445.3417721519).toFixed(0);
+} }
+function burstconv(val){
+with(document.conv){
+curr.value = (burst.value/5445.3417721519).toFixed(8);
+} } 
+$( document ).ready(function() {
+    with(document.conv){
+curr.value = (burst.value/5445.3417721519).toFixed(8);
+}
+});
+</script>	  <div class="container-fluid">
+		  <br>
+		  <div class="col-sm-12 col-xs-12">
+              <div class="panel">
+                <div class="panel-body">
+              <div class="row">
+					<div class="col-sm-4 col-xs-12">
+						<div id="seven-day-chart" style="height:300px;"></div>
+					</div>
+					<div class="col-sm-4 col-xs-12">
+                        						<table class="table table-hover table-striped table-no-border">
+							<tr>
+								<th>24 hour volume</th>
+								<td>17.62 btc</td>
+							</tr>
+							<tr>
+								<th>Net diff</th>
+								<td>14.93 PB</td>
+							</tr>
+							<tr>
+								<th>Average last price</th>
+								<td>79 Satoshi</td>
+							</tr>
+							<tr>
+								<th>1000 Burst =</th>
+								<td>0.18 USD</td>
+							</tr>
+							<tr>
+								<th>Current block hieght</th>
+								<td>99 761</td>
+							</tr>
+						</table>
+					  </div>
+                      <div class="col-sm-4">
+                        <table class="table table-no-border table-hover table-striped">
+                            <tr><th colspan="2">24 hour asset exchange info</th></tr>
+                            <tr>
+                                <td>Highest volume</td>
+                                <td><a href="../../index.html">ByteEMini</a></td>                            </tr>
+                            <tr>
+                                <td>Most traded</td>
+                                <td><a href="../../index.html">ByteEMini</a></td>                            
+                            </tr>
+                            <tr>
+                                <td>Total trades</td>
+                                <td>0</td>                            </tr>
+                            <tr>
+                                <td>Total Volume</td>
+                                <td>0 Burst</td>                            </tr>
+                          </table>                  
+			  </div>
+              </div>
+                    </div>
+              </div>
+		      <div class="panel">
+                <div class="panel-body">
+                    <h2>Featured</h2>
+              <div class="row">
+              <div class="col-sm-3">
+                <h3><a href="../../index.html" style="font-size:20px;">Byte Enterprises</a></h3>
+                  <p>
+                    The owners of this blockex, <a href="../../index.html">burst.ninja</a>, and heaps more cool stuff, this is quite an asset to invest in.
+                  </p>
+              </div>
+              <div class="col-sm-3">
+                <h3><a href="../../index.html" style="font-size:20px;">SOLARFARM</a></h3>
+                  <p>
+                    More commonly known as CELL, this is truly an asset of the future. Best to buy it on <a href="https://c-cex.com/?p=cell-btc">C-CEX</a> or NXT at <a href="https://trade.secureae.com/#18212211773827322818">SECUREAE</a>
+                  </p>
+              </div>
+              </div>
+                  </div>
+              </div>
+          </div>
+		  <div class="col-sm-12">
+		<div class="panel">
+			<div class="panel-body">
+				<h3>
+				Charts
+			</h3>
+			<div class="col-sm-4">
+				<div id="reward_chart"></div>
+			</div>
+				<div class="col-sm-4">
+                    <h4 class="">Rich list</h4>
+                    <table class="table">
+                        <tr><th>Account</th><th>Balance</th></tr>
+					<tr><td style="width:70px;"><a href="../../index.html">BURST-R8SQ-TUEM-DTHQ-7ATA3</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="17 059.51 USD">92 894 850 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">Bittrex</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="10 303.90 USD">56 108 239 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-XHQ2-VKF8-X82E-BN3DM</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="4 586.74 USD">24 976 393 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-QR5K-FFHZ-3RCD-9SL7T</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="2 917.32 USD">15 885 784 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">Perky Pat</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="2 343.69 USD">12 762 194 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-M78H-JUVQ-VKJG-3H3HL</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="2 048.18 USD">11 153 039 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-5NVZ-GXHA-N3S9-DGZBA</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="1 987.10 USD">10 820 438 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-XNS5-62HN-J3UY-79THE</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="1 531.75 USD">8 340 885 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">BURST-JQFA-ZCXN-R4AQ-CFF3E</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="1 285.51 USD">7 000 026 Burst</abbr></td></tr><tr><td style="width:70px;"><a href="../../index.html">Kigdu</a></td><td><abbr data-toggle="tooltip" data-placement="top" title="1 273.02 USD">6 932 004 Burst</abbr></td></tr>                    </table>
+                </div>
+				<div class="col-sm-4">
+					<div id="ccc" style="height:300px;"></div>
+				</div>
+				<div class="col-sm-12">
+					<div id="blockShareTwoFour" style="height:500px;"></div>
+				</div>
+			</div>
+		  </div>
+		</div>
+	</div>
+  <script src="../../bootstrap/3-3-4/js/bootstrap.min.js"></script><script src="../../js/block_subdomain/material.min.js"></script>
+	<script src="../../js/block_subdomain/ripples.min.js"></script>
+    <script src="../../dropdown/block_subdomain/jquery.dropdown.js"></script>
+<script>
+		$.material.init();
+    </script>
+    <!--<script>
+      $(document).ready(function() {
+        $('.select').dropdown({'optionClass': 'withripple'});
+      });
+      $().dropdown({autoinit: 'select'});
+    </script>--><script src="../../js/block_subdomain/timeago.js"></script>
+<script>
+	  jQuery(document).ready(function() {
+  jQuery('abbr.timeago').timeago();
+});
+</script>
+<script src="../../js/block_subdomain/app.js"></script>
+	  <script>
+//Prices
+$(function () {
+    $('#ccc').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: 'rgba(0,0,0,0)'
+        },
+        title: {
+            text: 'Burst price by exchanges'
+        },
+        xAxis: {
+            categories: ['Price'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Burst price(satoshi)',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' Satoshi'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'C-Cex',
+            data: [78]
+        }, {
+			name: 'Bittrex',
+            data: [80]
+        }, {
+            name: 'Poloniex',
+            data: [79]
+        }]
+    });
+});
+//seven day chart
+$(function () {
+    $('#seven-day-chart').highcharts({
+        title: {
+            text: '7 day price chart',
+            x: -20 //center
+        },
+		colors: ['#e74c3c','#e74c3c','#e74c3c'],
+        subtitle: {
+            text: '<a href="https://poloniex.com">Source: Poloniex.com</a>',
+            x: -20
+        },
+		xAxis: {
+          	labels:{
+				enabled: false
+		  	},
+        },
+        yAxis: {
+            title: {
+                text: "Price (satoshi's)"
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }],
+        },
+        tooltip: {
+            valueSuffix: ' sats'
+        },
+        series: [{
+            name: 'Price',
+            data: [["8PM Tuesday",81],["10PM Tuesday",81],["12AM Wednesday",73],["2AM Wednesday",76],["4AM Wednesday",77],["6AM Wednesday",85],["8AM Wednesday",91],["10AM Wednesday",89],["12PM Wednesday",92],["2PM Wednesday",92],["4PM Wednesday",91],["6PM Wednesday",93],["8PM Wednesday",90],["10PM Wednesday",90],["12AM Thursday",86],["2AM Thursday",89],["4AM Thursday",86],["6AM Thursday",88],["8AM Thursday",89],["10AM Thursday",87],["12PM Thursday",89],["2PM Thursday",89],["4PM Thursday",88],["6PM Thursday",87],["8PM Thursday",87],["10PM Thursday",91],["12AM Friday",87],["2AM Friday",86],["4AM Friday",87],["6AM Friday",87],["8AM Friday",90],["10AM Friday",88],["12PM Friday",88],["2PM Friday",86],["4PM Friday",84],["6PM Friday",86],["8PM Friday",85],["10PM Friday",86],["12AM Saturday",90],["2AM Saturday",86],["4AM Saturday",87],["6AM Saturday",86],["8AM Saturday",85],["10AM Saturday",85],["12PM Saturday",82],["2PM Saturday",80],["4PM Saturday",79],["6PM Saturday",79],["8PM Saturday",79],["10PM Saturday",81],["12AM Sunday",84],["2AM Sunday",84],["4AM Sunday",84],["6AM Sunday",79],["8AM Sunday",78],["10AM Sunday",78],["12PM Sunday",79],["2PM Sunday",79],["4PM Sunday",81],["6PM Sunday",81],["8PM Sunday",88],["10PM Sunday",98],["12AM Monday",92],["2AM Monday",94],["4AM Monday",104],["6AM Monday",107],["8AM Monday",99],["10AM Monday",99],["12PM Monday",99],["2PM Monday",102],["4PM Monday",100],["6PM Monday",101],["8PM Monday",80],["10PM Monday",88],["12AM Tuesday",88],["2AM Tuesday",81],["4AM Tuesday",79],["6AM Tuesday",83],["8AM Tuesday",82],["10AM Tuesday",84],["12PM Tuesday",84],["2PM Tuesday",81],["4PM Tuesday",79],["6PM Tuesday",78]]        }]
+    });
+});
+//reward chart 
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'reward_chart'
+            },
+            title: {
+                text: 'Projected and past blockreward',
+                x: -20 //center
+            },
+            xAxis: {
+                allowDecimals: false,
+                labels: {
+                    formatter: function() {
+                       return this.value;
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Reward'
+                },
+                min: 70
+            },
+           // plotOptions: {
+             //   series: {
+               //     pointStart: 0
+                //}
+            //},
+            series: [{
+                name: 'Past',
+                type: 'areaspline',
+                color: '#4572A7',
+                data: [[0, 10000], [10800, 9500], [21600, 9025],[32400, 8573.75], [43200,8145.0625], [54000, 7737.809375], [64800, 7350.91890625]]
+            }, {
+                name: 'Future',
+                dashStyle: 'dot',
+                color: '#4572A7',
+                data: [[75600, 6983], [86400, 6634], [97200, 6302], [108000, 5987], [118800, 5688], [129600, 5404], [140400, 5133], [151200, 4877], [162000, 4633], [172800, 4401], [183600, 4181], [194400, 3972], [205200, 3774], [216000, 3585], [226800, 3406], [237600, 3235], [248400, 3074], [259200, 2920], [270000, 2774], [280800, 2635], [291600, 2503], [302400, 2378], [313200, 2259], [324000, 2146], [334800, 2039], [345600, 1937], [356400, 1840], [367200, 1748], [378000, 1661], [388800, 1578], [399600, 1499], [410400, 1424], [421200, 1353], [432000, 1285], [442800, 1221], [453600, 1160], [464400, 1102], [475200, 1047], [486000, 994], [496800, 945], [507600, 897], [518400, 853], [529200, 810],  ]
+            }]
+        });
+    });
+});
+//Account blocks
+		  $(function () {
+    $('#blockShareTwoFour').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Test'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Blocks',
+            data: null,
+        }]
+    });
+});
+	  </script>
+  </body>
+
+<!-- Mirrored from burstcoin.info/block_subdomain/index/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Sep 2022 15:41:37 GMT -->
+</html>

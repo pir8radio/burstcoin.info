@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- Mirrored from burstcoin.info/blog/index_controller_blog_action_view_category_energy-efficiency/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Sep 2022 15:42:06 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Burstcoin.info blog -  - Energy Efficiency</title>
+<meta name="generator" content="Nibbleblog">
+<meta name="keywords" content="Burst, burstcoin, crypto, cryptocurrency, cryptocurrencies, bitcoin, blockchain, smart contracts, automated transactions, proof of capacity">
+<link rel="canonical" href="index.html">
+<link rel="alternate" type="application/atom+xml" title="ATOM Feed" href="../feed/index.html">
+<link rel="stylesheet" type="text/css" href="../themes/echo/css/style.css">
+<link rel="icon" type="image/png" href="../../img/favicon.ico">
+		</head>
+<body>
+	<header>
+		<img src="../themes/echo/css/img/logo.svg">
+		<h1><a href="../index.html">Burstcoin.info blog</a></h1>
+		<span class="slogan"></span>
+		<a id="button" href="javascript:void(0)"><img src="../themes/echo/css/img/button.png"></a>
+	</header>
+	<section class="main">
+		<div class="content">
+			<article><h2 class="post-title"><a href="../index_controller_post_action_view_id_post_4/index.html">Energy Efficiency Analysis of Proof of Capacity</a></h2><span class="publish-date"><span class="month">Jun</span> <span class="day">17</span><span class="year">2015</span></span><p>by Matthew Czarnek</p>
+<p>The energy consuming part of mining is performing the calculations, but with a Proof of Capacity coin such as Burst, the computer performs the calculations once, then all it does while mining is to read a few megabytes off of a hard drive every few minutes and checks every nonce it pulls off, instead of working through heavy calculations.<br/> <br/>Some have argued that miners will just buy more equipment to get to the point where the amount of Burst they are earning equals the amount they are spending on electricity, so they still spend the same amount on electricity. However, this argument does not take into account the initial cost of the mining equipment that must be amortized over the lifetime of the equipment. The more energy efficient the equipment relative to its cost, the more energy efficient the overall system.</p>
+<p>Keep in mind that even those ASICs that are rated as most energy efficient (though no where near as efficient as a hard drive) generally require cooling systems that are not included in with their energy efficiency ratings.</p>
+<p>Most importantly though is that, given that Burst coin is ASIC proof, it means that you will have many more people who will mine from their PCs during the time their PCs happen to be on anyway and those miners will be profitable and have less risk of putting their money into mining equipment that cannot be resold. This is essentially free energy as far as Burst is concerned as those miners would be using the same amount of energy regardless of whether or not they were mining.</p>
+<p>A quick analysis of the energy efficiency of Proof of Capacity vs Proof of Work, let’s compare two ‘mining machines’. Keep in mind that what keeps the network secure is how much money has gone into buying mining equipment.</p>
+<p>Bitcoin mining machine<br/>SP35 Yukon Power [1]<br/>Cost: $2,235 <br/>Power Consumption: 3650 W <br/>Power Consumption per dollar spent: 1.63 W/$</p>
+<p>Burst mining machine <br/>Seagate Barracuda 7200.14 Hard Drive [2]<br/>Cost: $101.99<br/>Average Power Consumption: 5.50 W <br/>Power Consumption per Dollar spent: 0.05 W/$</p>
+<p>Your average miner would likely be using this drive at a fairly average power level, meaning:</p>
+<p>1.63 W$0.05 W$= 32.6</p>
+<p>This means that the Bitcoin miners use approximately 33 times more energy than an extra hard drive mining for Burst.</p>
+<p>Note that this calculation assumes that you are adding this hard drive to a machine that already happens to be running. While a fairly safe assumption for the majority of miners, let’s look at the case where you get a machine dedicated to mining for Burst using multiple hard drives.</p>
+<p>So, let’s take the amount of money invested into that Bitcoin miner, and put it into buying a dedicated mining machine and hard drives instead.</p>
+<p>We need a computer first, let’s assume that the miner would be trying to save money and buys a cheap machine.</p>
+<p>An excellent choice for the miner would be to buy a Banana Pi for $40, that uses 2W. [3]</p>
+<p>That means that given a budget of $2,235, he can put $2195 into buying hard drives. So, assume that equals 22 hard drives. Now he plugs those in and mines using them.. while theoretically you could save some power by idling some drives and only reading from one at a time, or even go so far as to totally turn them off and on, let’s assume he just runs them all at average power.</p>
+<p>22 hard drives * 5.5W / hard drive = 121W<br/>121W for hard drives + 10 W for Odroid = 131W</p>
+<p>So the Burst miner uses 131W while the Bitcoin miner uses 3650W for the same amount of money invested.</p>
+<p>3650W/131W=27.9</p>
+<p>So even using these calculations, a Bitcoin miner uses 28 times more energy than a Burst miner assuming a similar level of decentralization.</p>
+<p>However, it is unlikely that a Proof of Capacity network would have a similar level of decentralization. It is more likely that it will end up being run at a much more decentralized level with many people who are mining with their free space and probably will . But if you are doing a one to one</p>
+<p>And for those saying that Proof of Stake is the energy efficient choice, keep in mind that you still need to run a computer which includes a hard drive in order to mine for Proof of Stake. You could argue that with Proof of Capacity people will add extra hard drives, which probably means that Proof of Capacity does use more energy but the tradeoff is that it’s also more secure. And if you do start switching hard drives on and off, then you can save even more energy in this way. Note that Google did a study that shows that turning hard drives off and on repeatedly does low their lifespan a little bit but not to the same extent previously believed. [4] Additionally consider that if you have a enough drives and correctly plot them, this could likely be considered to be low to medium usage regarding the number of times it is turned off and on per day.</p>
+<p>But let’s do some little bit more in depth calculations. Going to burst.ninja, you find a list of all miners all the network and their estimated capacity, assume that there will probably be a similar distribution once Burst grows. Summing all of the capacities of the 108 miners mining for Burst.ninja as of April 15th, you find that they are mining with a total of 1391.1 TB.</p>
+<p>1391.1 TB108 TB=12.88 TB</p>
+<p>Using the Seagate Barracuda 7200.14 as detailed above, this uses 5.50W per 3TB. This is equivalent to 1.8 W per TB. This means that your average miner is using:</p>
+<p>12.88TB * 1.8W per TB = 23 W per miner</p>
+<p>Additionally, every miner that is mining for either coin is using the amount of energy their computer uses to mine.</p>
+<p>Let’s use an estimate of 100W per computer [ 5 ] This means that Burst uses 100W + 23W = 123W, while a Proof of Stake miner uses 100W.</p>
+<p>So 123W/100W=1.23.</p>
+<p>This means that Proof of Capacity only uses 23% more energy than a Proof of Stake coin.</p>
+<p>Remember that these numbers don’t take into account that your average user will likely be mining with their hard drives during the times they happen to have their computer turned on. This is basically free energy. Another source of free energy will be data centers. Data centers have to have extra hard drives on hand, just in case they have an extra busy day.</p>
+<p>And for those arguing that the only thing miners will care about is the price of electricity and not the fixed initial cost of buying a hard drive.. keep in mind that by adjusting the minimum required transaction fee, Burst can change the number of miners online by changing how profitable it is to mine for the network. Burst will either end up with at least 30 times lower energy use and at least 30 times lower transaction fees than BTC to cover the cost of hard drives or at least 30 times greater security due to more money being invested into the hardware. Keep in mind the price of a 50% attack is the cost of hard drives, not electricity.</p>
+<p>In conclusion, Proof of Capacity uses approximately 30 times less energy than Proof of Work and only approximately 1.25 times more energy than Proof of Stake.</p>
+<p> </p>
+<p>1 "SP35 YUKON POWER SHIPPING FROM STOCK" Web. 21 Mar. 2015. &lt; <a href="http://www.spondoolies-tech.com/products/sp35-yukon-power-shipping-from-stock">http://www.spondoolies-tech.com/products/sp35-yukon-power-shipping-from-stock</a> &gt;.</p>
+<p>2 "Compare Barracuda 3 TB 3.5" Hard Drive." tom’s HARDWARE Web. 21 Mar. 2015. &lt; <a href="https://www.tomshardware.com/charts/hdd-charts-2013/compare,2917.html?prod%5B5348%5D=on">http://www.tomshardware.com/charts/hdd-charts-2013/compare,2917.html?prod%5B5348%5D=on</a> &gt;.</p>
+<p>3 "Banana Pi Computer Board - BPI-M1" Tiny One Systems Web. 17 June 2015 &lt; <a href="http://tinyonestore.com/products/banana-pi?gclid=Cj0KEQjwkIurBRDwoZfi1bGCxocBEiQAmcs-ereCKhH-YJQQjjYNjIXDlMNBL0JwUX_VCyoQLF2sqqgaAs2o8P8HAQ">http://tinyonestore.com/products/banana-pi?gclid=Cj0KEQjwkIurBRDwoZfi1bGCxocBEiQAmcs-ereCKhH-YJQQjjYNjIXDlMNBL0JwUX_VCyoQLF2sqqgaAs2o8P8HAQ</a> &gt;.</p>
+<p>4 "Failure Trends in a Large Disk Drive Population." Web. 21 Mar. 2015. &lt; <a href="../../media/research-google-com/en/us/archive/disk_failures.pdf">http://static.googleusercontent.com/media/research.google.com/en/us/archive/disk_failures.pdf</a> &gt;.</p>
+<p>5 "Electricity usage of a Computer - Energy Use Calculator" Web. 18 Apr. 2015. &lt;http://energyusecalculator.com/electricity_computer.htm&gt;.</p><ul class="info"><li><a href="../index_controller_post_action_view_id_post_4/index.html">Permalink</a></li><li><a target="_blank" href="https://twitter.com/share?url=http%3A%2F%2Fburstcoin.info%2Fblog%2Findex.php%3Fcontroller%3Dpost%26amp%3Baction%3Dview%26amp%3Bid_post%3D4">Tweet</a></li><li><a href="../index_controller_post_action_view_id_post_4/index.html#comment_form">Comments (0)</a></li></ul></article><div class="pager"></div>			<footer>
+				<p><a href="../feed/index.html">Atom</a></p>
+				<p>BURST: Your C:\urrency</p>
+			</footer>
+		</div>
+		<aside id="sidebar">
+			<div class="plugin_box plugin_categories"><h3>Categories</h3><ul><li class="category"><a href="../index_controller_blog_action_view_category_uncategorized/index.html">Uncategorised</a></li><li class="category"><a href="../index_controller_blog_action_view_category_mining/index.html">Mining</a></li><li class="category"><a href="index.html">Energy Efficiency</a></li><li class="category"><a href="../index_controller_blog_action_view_category_automated-transactions/index.html">Automated Transactions</a></li><li class="category"><a href="../index_controller_blog_action_view_category_wallet/index.html">Wallet</a></li><li class="category"><a href="../index_controller_blog_action_view_category_news/index.html">News</a></li><li class="category"><a href="../index_controller_blog_action_view_category_proof-of-capacity/index.html">Proof of Capacity</a></li></ul></div><div class="plugin_box plugin_latest_posts"><h3>Latest posts</h3><ul><li><a href="../index_controller_post_action_view_id_post_5/index.html">BURST Windows GUI wallet/plotter/miner RELEASED! HDD mining and BURST is now easy for ALL!</a></li><li><a href="../index_controller_post_action_view_id_post_4/index.html">Energy Efficiency Analysis of Proof of Capacity</a></li><li><a href="../index_controller_post_action_view_id_post_3/index.html">Why Proof of Capacity should be taken seriously</a></li><li><a href="../index_controller_post_action_view_id_post_2/index.html">The FIRST BURST blog post :) by crowetic</a></li></ul></div><div class="plugin_box plugin_pages"><h3>Pages</h3><ul><li><a href="../index.html">Home</a></li></ul></div>		</aside>
+	</section>
+	<script src="../admin/js/jquery/jquery.js"></script>
+<script src="../themes/echo/js/script.js"></script>
+</body>
+
+<!-- Mirrored from burstcoin.info/blog/index_controller_blog_action_view_category_energy-efficiency/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Sep 2022 15:42:06 GMT -->
+</html>
