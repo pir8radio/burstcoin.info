@@ -1,0 +1,35 @@
+body{
+	background-color:white;
+}
+ul#footer-places{
+	list-style-type: none;
+	margin:0 auto;
+}
+.footer-places-element{
+	display:inline-block;
+	padding-top:18px;
+	padding-right:20px;
+}
+.login-link, .login-link:hover{
+	color:#8e44ad;
+}
+#p-logo{
+	display:none;
+}
+#footer{
+	background-color:#536DFE;
+	color:white;
+	height:50px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+}
+#footer a{
+	color:white;
+}
+#contentSub{
+	font-size:10px;
+	display:none;
+}
+.form-group.has-white .form-control{box-shadow:none}.form-group.has-white .material-input:focus,.form-group.has-white .form-control:focus,.form-group.has-white .form-control.focus{background-image:linear-gradient(white,white),linear-gradient(#d2d2d2,#d2d2d2);box-shadow:none}.form-group.has-white .control-label,.form-group.has-white input.form-control:focus~.floating-label{color:white}
